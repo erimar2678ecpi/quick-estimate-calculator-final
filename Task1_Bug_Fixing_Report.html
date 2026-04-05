@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 1 Bug Fixing Report</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.55;
+        margin: 40px;
+        color: #222;
+      }
+
+      h1,
+      h2 {
+        color: #123c34;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        text-align: center;
+        margin-bottom: 28px;
+        color: #555;
+      }
+
+      p,
+      li {
+        font-size: 12pt;
+      }
+
+      ul,
+      ol {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task 1: Bug Fixing and Debugging Report</h1>
+    <p class="subtitle">Quick Estimate Calculator React Project</p>
+
+    <h2>Introduction</h2>
+    <p>
+      The bug fixing process is the structured method used to identify, diagnose,
+      correct, test, and document issues found during software testing. A good bug
+      fixing process starts by reproducing the problem, isolating the cause,
+      applying a focused fix, and then retesting the application to confirm that
+      the issue is resolved without creating new problems. This project used that
+      process to improve both functionality and presentation quality.
+    </p>
+
+    <h2>Bugs and Issues Identified During Testing</h2>
+    <ol>
+      <li>
+        <strong>Font size was too small.</strong> Several labels, helper areas,
+        buttons, and list entries were difficult to read, especially for a final
+        presentation.
+      </li>
+      <li>
+        <strong>Stale estimate data remained visible.</strong> After calculating an
+        estimate, changing the service hours did not immediately clear the old
+        total, which could confuse users.
+      </li>
+      <li>
+        <strong>Duplicate saved estimates were possible.</strong> Users could press
+        the save button repeatedly and create repeated history entries for the same
+        estimate.
+      </li>
+      <li>
+        <strong>Reset behavior was too aggressive.</strong> Resetting the form also
+        cleared all saved history, even when the user only wanted to correct the
+        current estimate.
+      </li>
+      <li>
+        <strong>Input accessibility and validation needed improvement.</strong>
+        Labels were not strongly connected to the input fields, and helper/error
+        messaging needed clearer behavior for testing and usability.
+      </li>
+    </ol>
+
+    <h2>Debugging Techniques Used</h2>
+    <ul>
+      <li>
+        <strong>Manual testing:</strong> The calculator was tested by entering valid,
+        invalid, empty, and repeated values to observe how the interface responded.
+      </li>
+      <li>
+        <strong>State tracing:</strong> The behavior of the current estimate, hours
+        input, and estimate history was reviewed to determine when the UI became
+        inconsistent.
+      </li>
+      <li>
+        <strong>Logging and inspection:</strong> Developer tools and component
+        inspection were used to review layout spacing, typography, and state-driven
+        rendering problems.
+      </li>
+      <li>
+        <strong>Unit testing:</strong> React Testing Library tests were updated so
+        the project now checks rendering, validation, calculation, stale total
+        clearing, and duplicate-save prevention.
+      </li>
+      <li>
+        <strong>Responsive design checks:</strong> Browser developer tools were used
+        to verify that the larger text and new layout still worked on smaller
+        screens.
+      </li>
+    </ul>
+
+    <h2>Fixes Applied</h2>
+    <ul>
+      <li>Increased the global font size and rebuilt the layout for better readability.</li>
+      <li>Added a stronger visual hierarchy with a polished hero section and improved cards.</li>
+      <li>Cleared the total estimate whenever the user changes the service hours input.</li>
+      <li>Prevented duplicate saves by disabling the save button after the estimate is stored.</li>
+      <li>Separated <em>Reset Form</em> from <em>Clear History</em> for better user control.</li>
+      <li>Improved validation with clearer error messages and helper text.</li>
+      <li>Added better accessibility through labeled inputs and error associations.</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>
+      After applying the fixes, the application became easier to read, more visually
+      appealing, and more reliable during normal use. The new design is better
+      suited for the final week presentation, and the logic fixes reduce confusion
+      when users calculate and save multiple estimates.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      This task demonstrated the importance of following a bug fixing process during
+      testing. By reproducing issues, analyzing the cause, using debugging tools,
+      and retesting the final result, the project improved in functionality,
+      usability, accessibility, and appearance. The application is now in a better
+      state for deployment and presentation.
+    </p>
+  </body>
+</html>
