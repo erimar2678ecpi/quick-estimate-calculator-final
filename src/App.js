@@ -124,11 +124,11 @@ function App() {
     <div className="app-shell">
       <header className="hero">
         <div className="hero-copy">
-          <p className="hero-eyebrow">Final Week Presentation Build</p>
+          <p className="hero-eyebrow">Transportation Cost Estimator</p>
           <h1>Quick Estimate Calculator</h1>
           <p className="hero-description">
-            A polished transportation cost estimator with stronger validation, larger
-            typography, estimate history, and a chart-ready summary for testing and deployment.
+            Create fast transportation service quotes with clear pricing, readable results,
+            saved estimate history, and a simple visual comparison chart.
           </p>
         </div>
 
